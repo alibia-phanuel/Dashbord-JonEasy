@@ -1,0 +1,11 @@
+.sideBar {
+  position: relative;
+  background-color: aqua;
+  height: 100vh;
+}
+@media only screen and (max-width: 720px) {
+  .sideBar {
+    position: absolute;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,14 @@
+.sideBar {
+  background-color: aqua;
+}
+.BoxLeft {
+  background-color: orange;
+}
+
+.BoxRight {
+  width: 100%;
+}
+@media only screen and (max-width: 1245px) {
+}
+@media only screen and (max-width: 1604px) {
+}
