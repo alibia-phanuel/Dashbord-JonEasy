@@ -4,6 +4,7 @@ import { RxDashboard } from "react-icons/rx";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import usa from "../../assets/flag.png";
 import profil from "../../assets/flag.png";
+import piture from "../../assets/profile.jpg";
 const Header = () => {
   return (
     <div className="w-full flex  justify-between items-center px-4 bg-white border-b">
@@ -21,15 +22,18 @@ const Header = () => {
         />
       </div>
       <div className="flex justify-between items-center w-[300px] max-md:w-full ">
-        <div className="w-[30px] cursor-pointer">
+        {/**
+          <div className="w-[30px] cursor-pointer">
           <img src={usa} alt="flag" className="w-ful" />
-        </div>
-        <div>
+        </div> */}
+        {/**
+          <div>
           <FaRegMoon className="cursor-pointer" />
-        </div>
-        <div>
+        </div> */}
+        {/**
+         <div>
           <RxDashboard className="cursor-pointer" />
-        </div>
+        </div> */}
         <div className="text-[23px] relative">
           <div className="text-[15px] font-semibold bg-[#FD625E] rounded-full flex justify-center w-[20px] items-center text-white absolute left-2  bottom-5">
             5
@@ -37,8 +41,8 @@ const Header = () => {
           <IoIosNotificationsOutline className="cursor-pointer" />
         </div>
         <div className="bg-[#F7F7F9]  h-[75px] flex justify-center items-center w-20">
-          <div className="w-[30px] rounded-full bg-red-700">
-            <img src={profil} alt="profle" className="w-full rounded-full" />
+          <div className="w-[30px] rounded-full ">
+            <img src={piture} alt="profle" className="w-full rounded-full" />
           </div>
         </div>
       </div>

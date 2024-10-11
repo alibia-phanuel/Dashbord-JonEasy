@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import { CgLoadbarAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-import { LuGanttChartSquare } from "react-icons/lu";
+
 import { FaAngleRight } from "react-icons/fa6";
 import { CiCircleRemove } from "react-icons/ci";
 import Table from "../components/tableaction/Table";
@@ -32,239 +32,177 @@ import {
 const ManageBusinessLicences = () => {
   //Tabs bar
   const [activeTab, setActiveTab] = useState("Cameroun");
-
   const data = [
     {
       label: "Angola",
       value: "Angola",
       abbr: "AGO",
-      flag: <LuGanttChartSquare />,
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/ao.png"
+          alt="Drapeau de l'Angola"
+          className="w-[20px]"
+        />
+      ),
       desc: "L'Angola est un pays d'Afrique centrale connu pour ses vastes ressources naturelles, notamment le pétrole et les diamants. La capitale, Luanda, est une ville portuaire dynamique sur la côte atlantique. L'Angola possède également une riche diversité culturelle avec des influences portugaises en raison de son passé colonial.",
     },
     {
       label: "Cameroun",
       value: "Cameroun",
       abbr: "CMR",
-      flag: <LuGanttChartSquare />,
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/cm.png"
+          alt="Drapeau du Cameroun"
+          className="w-[20px]"
+        />
+      ),
       desc: <Table />,
     },
     {
       label: "République centrafricaine",
       value: "République centrafricaine",
       abbr: "CAF",
-      flag: <LuGanttChartSquare />,
-      desc: "La République centrafricaine est un pays enclavé d'Afrique centrale, riche en ressources naturelles comme les diamants, l'or, et le bois. Cependant, elle est marquée par des conflits internes et une instabilité politique persistante. La capitale, Bangui, est située sur les rives de la rivière Oubangui.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/cf.png"
+          alt="Drapeau de la République centrafricaine"
+          className="w-[20px]"
+        />
+      ),
+      desc: "La République centrafricaine est un pays enclavé d'Afrique centrale, riche en ressources naturelles comme les diamants, l'or, et le bois.",
     },
     {
       label: "Tchad",
       value: "Tchad",
       abbr: "TCD",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Tchad est un pays d'Afrique centrale caractérisé par ses vastes étendues désertiques et ses paysages diversifiés allant des montagnes du Tibesti au nord aux zones humides du sud. N'Djaména, la capitale, est le centre politique et économique du pays.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/td.png"
+          alt="Drapeau du Tchad"
+          className="w-[20px]"
+        />
+      ),
+      desc: "Le Tchad est un pays d'Afrique centrale caractérisé par ses vastes étendues désertiques et ses paysages diversifiés.",
     },
     {
       label: "République du Congo",
       value: "République du Congo",
       abbr: "COG",
-      flag: <LuGanttChartSquare />,
-      desc: "La République du Congo, souvent appelée Congo-Brazzaville, est un pays d'Afrique centrale avec de vastes forêts tropicales et une riche biodiversité. Brazzaville, sa capitale, est située sur le fleuve Congo, juste en face de Kinshasa, la capitale de la République démocratique du Congo.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/cg.png"
+          alt="Drapeau de la République du Congo"
+          className="w-[20px]"
+        />
+      ),
+      desc: "La République du Congo, souvent appelée Congo-Brazzaville, est un pays d'Afrique centrale avec de vastes forêts tropicales.",
     },
     {
       label: "République démocratique du Congo",
       value: "République démocratique du Congo",
       abbr: "COD",
-      flag: <LuGanttChartSquare />,
-      desc: "La République démocratique du Congo, également appelée RDC, est l'un des plus grands pays d'Afrique centrale. Elle est dotée de vastes ressources naturelles, notamment des minerais précieux. Kinshasa, la capitale, est une des plus grandes villes d'Afrique.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/cd.png"
+          alt="Drapeau de la République démocratique du Congo"
+          className="w-[20px]"
+        />
+      ),
+      desc: "La République démocratique du Congo est l'un des plus grands pays d'Afrique centrale.",
     },
     {
       label: "Guinée équatoriale",
       value: "Guinée équatoriale",
       abbr: "GNQ",
-      flag: <LuGanttChartSquare />,
-      desc: "La Guinée équatoriale est un petit pays d'Afrique centrale composé d'une partie continentale et de plusieurs îles. Malabo, la capitale, est située sur l'île de Bioko. Le pays est l'un des principaux producteurs de pétrole en Afrique subsaharienne.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/gq.png"
+          alt="Drapeau de la Guinée équatoriale"
+          className="w-[20px]"
+        />
+      ),
+      desc: "La Guinée équatoriale est un petit pays d'Afrique centrale composé d'une partie continentale et de plusieurs îles.",
     },
     {
       label: "Gabon",
       value: "Gabon",
       abbr: "GAB",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Gabon est un pays d'Afrique centrale situé sur la côte atlantique, connu pour ses vastes parcs nationaux et sa biodiversité exceptionnelle. Libreville, la capitale, est une ville moderne avec une forte influence française.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/ga.png"
+          alt="Drapeau du Gabon"
+          className="w-[20px]"
+        />
+      ),
+      desc: "Le Gabon est un pays d'Afrique centrale situé sur la côte atlantique.",
     },
     {
       label: "São Tomé-et-Príncipe",
       value: "São Tomé-et-Príncipe",
       abbr: "STP",
-      flag: <LuGanttChartSquare />,
-      desc: "São Tomé-et-Príncipe est un petit archipel situé dans le golfe de Guinée, au large de la côte ouest de l'Afrique centrale. Le pays est connu pour ses plages magnifiques, ses forêts tropicales et son atmosphère paisible. São Tomé est la capitale et la plus grande ville.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/st.png"
+          className="w-[20px]"
+          alt="Drapeau de São Tomé-et-Príncipe"
+        />
+      ),
+      desc: "São Tomé-et-Príncipe est un petit archipel situé dans le golfe de Guinée.",
     },
     {
       label: "Bénin",
       value: "Bénin",
       abbr: "BEN",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Bénin est un pays d'Afrique de l'ouest situé sur la côte du golfe de Guinée. Il est reconnu pour son histoire liée au royaume du Dahomey et pour être le berceau du vaudou. Porto-Novo est la capitale officielle, mais Cotonou est la plus grande ville et le centre économique.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/bj.png"
+          alt="Drapeau du Bénin"
+          className="w-[20px]"
+        />
+      ),
+      desc: "Le Bénin est un pays d'Afrique de l'ouest situé sur la côte du golfe de Guinée.",
     },
     {
       label: "Burkina Faso",
       value: "Burkina Faso",
       abbr: "BFA",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Burkina Faso est un pays enclavé d'Afrique de l'ouest, connu pour ses paysages désertiques et ses traditions culturelles riches. Ouagadougou, la capitale, est le cœur politique et culturel du pays.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/bf.png"
+          alt="Drapeau du Burkina Faso"
+          className="w-[20px]"
+        />
+      ),
+      desc: "Le Burkina Faso est un pays enclavé d'Afrique de l'ouest.",
     },
     {
       label: "Cap-Vert",
       value: "Cap-Vert",
       abbr: "CPV",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Cap-Vert est un archipel situé au large de la côte ouest de l'Afrique, connu pour ses plages, ses montagnes volcaniques et sa culture créole. Praia est la capitale et la plus grande ville.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/cv.png"
+          alt="Drapeau du Cap-Vert"
+          className="w-[20px]"
+        />
+      ),
+      desc: "Le Cap-Vert est un archipel situé au large de la côte ouest de l'Afrique.",
     },
     {
       label: "Côte d'Ivoire",
       value: "Côte d'Ivoire",
       abbr: "CIV",
-      flag: <LuGanttChartSquare />,
-      desc: "La Côte d'Ivoire, située en Afrique de l'ouest, est un pays avec une économie dynamique, particulièrement connue pour sa production de cacao. Abidjan est la plus grande ville et un important centre économique, tandis que Yamoussoukro est la capitale politique.",
+      flag: (
+        <img
+          src="https://flagcdn.com/w320/ci.png"
+          alt="Drapeau de la Côte d'Ivoire"
+          className="w-[20px]"
+        />
+      ),
+      desc: "La Côte d'Ivoire est un pays d'Afrique de l'ouest.",
     },
-    {
-      label: "Gambie",
-      value: "Gambie",
-      abbr: "GMB",
-      flag: <LuGanttChartSquare />,
-      desc: "La Gambie est le plus petit pays d'Afrique continentale, bordé par le Sénégal et l'océan Atlantique. Banjul, la capitale, est une ville côtière avec un riche patrimoine colonial.",
-    },
-    {
-      label: "Ghana",
-      value: "Ghana",
-      abbr: "GHA",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Ghana est un pays d'Afrique de l'ouest avec une économie en croissance rapide, soutenue par ses exportations de cacao, d'or et de pétrole. Accra, la capitale, est une ville animée sur la côte atlantique.",
-    },
-    {
-      label: "Guinée",
-      value: "Guinée",
-      abbr: "GIN",
-      flag: <LuGanttChartSquare />,
-      desc: "La Guinée est un pays d'Afrique de l'ouest connu pour ses ressources minières, notamment la bauxite. Conakry, la capitale, est un port important sur l'océan Atlantique.",
-    },
-    {
-      label: "Guinée-Bissau",
-      value: "Guinée-Bissau",
-      abbr: "GNB",
-      flag: <LuGanttChartSquare />,
-      desc: "La Guinée-Bissau est un petit pays d'Afrique de l'ouest, avec un archipel de plus de 80 îles. Bissau, la capitale, est située sur la côte, et le pays est connu pour sa culture riche et son histoire de commerce maritime.",
-    },
-    {
-      label: "Liberia",
-      value: "Liberia",
-      abbr: "LBR",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Liberia est un pays d'Afrique de l'ouest fondé par des Afro-Américains libres au XIXe siècle. Monrovia, la capitale, porte le nom du président américain James Monroe, et le pays a une riche histoire liée à son origine unique.",
-    },
-    {
-      label: "Mali",
-      value: "Mali",
-      abbr: "MLI",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Mali est un grand pays enclavé d'Afrique de l'ouest, connu pour son histoire ancienne liée à l'empire du Mali et à la ville légendaire de Tombouctou. Bamako, la capitale, est un centre culturel et économique du pays.",
-    },
-    {
-      label: "Mauritanie",
-      value: "Mauritanie",
-      abbr: "MRT",
-      flag: <LuGanttChartSquare />,
-      desc: "La Mauritanie est un pays d'Afrique de l'ouest avec une grande partie de son territoire couvert par le désert du Sahara. Nouakchott, la capitale, est située sur la côte Atlantique.",
-    },
-    {
-      label: "Niger",
-      value: "Niger",
-      abbr: "NER",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Niger est un pays enclavé d'Afrique de l'ouest, connu pour ses vastes étendues désertiques. Niamey, la capitale, est située au bord du fleuve Niger, et le pays est riche en culture et histoire, malgré les défis liés au climat aride.",
-    },
-    {
-      label: "Nigeria",
-      value: "Nigeria",
-      abbr: "NGA",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Nigeria est le pays le plus peuplé d'Afrique, avec une économie diversifiée comprenant le pétrole, les finances et les technologies. Abuja, la capitale, est située dans le centre du pays, tandis que Lagos est le principal centre économique et commercial.",
-    },
-    {
-      label: "Sénégal",
-      value: "Sénégal",
-      abbr: "SEN",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Sénégal est un pays d'Afrique de l'ouest connu pour sa culture vivante, sa musique, et son histoire coloniale. Dakar, la capitale, est une ville portuaire dynamique sur la côte Atlantique.",
-    },
-    {
-      label: "Sierra Leone",
-      value: "Sierra Leone",
-      abbr: "SLE",
-      flag: <LuGanttChartSquare />,
-      desc: "La Sierra Leone est un pays d'Afrique de l'ouest avec des plages magnifiques et une histoire marquée par la traite des esclaves. Freetown, la capitale, est une ville côtière avec une riche histoire coloniale.",
-    },
-    {
-      label: "Togo",
-      value: "Togo",
-      abbr: "TGO",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Togo est un petit pays d'Afrique de l'ouest avec une diversité culturelle notable et des plages côtières. Lomé, la capitale, est un important centre économique et portuaire.",
-    },
-    {
-      label: "Algérie",
-      value: "Algérie",
-      abbr: "DZA",
-      flag: <LuGanttChartSquare />,
-      desc: "L'Algérie est un pays d'Afrique du Nord avec une grande partie de son territoire couverte par le désert du Sahara. Alger, la capitale, est une ville méditerranéenne avec une riche histoire culturelle et une architecture historique.",
-    },
-    {
-      label: "Égypte",
-      value: "Égypte",
-      abbr: "EGY",
-      flag: <LuGanttChartSquare />,
-      desc: "L'Égypte est un pays d'Afrique du Nord célèbre pour ses monuments anciens comme les pyramides de Gizeh et les temples de Louxor. Le Caire, la capitale, est une grande ville avec un riche patrimoine historique et culturel.",
-    },
-    {
-      label: "Libye",
-      value: "Libye",
-      abbr: "LBY",
-      flag: <LuGanttChartSquare />,
-      desc: "La Libye est un pays d'Afrique du Nord avec une grande partie de son territoire désertique. Tripoli, la capitale, est située sur la côte méditerranéenne, et le pays a une riche histoire antique et islamique.",
-    },
-    {
-      label: "Maroc",
-      value: "Maroc",
-      abbr: "MAR",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Maroc est un pays d'Afrique du Nord connu pour ses paysages variés, allant des plages méditerranéennes aux montagnes de l'Atlas. Rabat est la capitale politique, tandis que Casablanca est le principal centre économique.",
-    },
-    {
-      label: "Maurice",
-      value: "Maurice",
-      abbr: "MUS",
-      flag: <LuGanttChartSquare />,
-      desc: "L'île Maurice est un petit pays insulaire situé dans l'océan Indien, connu pour ses plages paradisiaques et son environnement naturel préservé. Port-Louis, la capitale, est le principal centre commercial et culturel de l'île.",
-    },
-    {
-      label: "Soudan",
-      value: "Soudan",
-      abbr: "SDN",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Soudan est un pays d'Afrique du Nord-Est avec une histoire ancienne riche, notamment liée aux civilisations nubiennes. Khartoum, la capitale, est située à la confluence des rivières Nil Bleu et Nil Blanc.",
-    },
-    {
-      label: "Soudan du Sud",
-      value: "Soudan du Sud",
-      abbr: "SSD",
-      flag: <LuGanttChartSquare />,
-      desc: "Le Soudan du Sud est le plus jeune pays d'Afrique, ayant obtenu son indépendance du Soudan en 2011. Juba, la capitale, est un centre administratif et économique dans un contexte de défis politiques et économiques.",
-    },
-    {
-      label: "Syrie",
-      value: "Syrie",
-      abbr: "SYR",
-      flag: <LuGanttChartSquare />,
-      desc: "La Syrie est un pays du Moyen-Orient avec une histoire ancienne riche, incluant des sites archéologiques importants comme Palmyre. Damas est la capitale, mais le pays est actuellement marqué par un conflit prolongé et une instabilité.",
-    },
+    // Ajoutez les autres pays de la même manière.
   ];
 
   //Accirdion Action
